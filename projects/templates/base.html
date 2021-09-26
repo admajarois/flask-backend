@@ -41,9 +41,7 @@
             {% include './layouts/sidebar.html' %}
         {% endblock %}
         <div class="content-wrapper">
-            <section class="content">
-                {% block content %}{% endblock %}
-            </section>
+            {% block content %}{% endblock %}
         </div>
         {% block footer %}
             {% include './layouts/footer.html' %}
@@ -57,7 +55,7 @@
     <script src="{{url_for('static', filename='lugins/jquery-ui/jquery-ui.min.js')}}"></script>
     <script>
         $.widget.bridge('uibutton', $.ui.button)
-      </script>
+    </script>
     <script src="{{url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{url_for('static', filename='plugins/chart.js/Chart.min.js')}}"></script>
     <script src="{{url_for('static', filename='plugins/sparklines/sparkline.js')}}"></script>

@@ -12,3 +12,8 @@ def home():
 def login():
     form = LoginForm()
     return render_template('login.html', title='Sign In')
+
+@app.route('/users')
+def users():
+
+    return render_template('users.html')
