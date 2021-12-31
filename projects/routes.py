@@ -1,21 +1,22 @@
 from projects.forms import LoginForm
-from flask import render_template
-from projects import app
+from flask import render_template, Blueprint
 from projects.forms import LoginForm
 
+view = Blueprint('view', __name__)
 
-@app.route('/')
-@app.route('/home')
+
+@view.route('/')
+@view.route('/home')
 def home():
     return render_template('home.html', title="Home")
 
 
-@app.route('/login')
+@view.route('/login')
 def login():
     form = LoginForm()
     return render_template('login.html', title='Sign In')
 
 
-@app.route('/users')
+@view.route('/users')
 def users():
     return render_template('users.html')
