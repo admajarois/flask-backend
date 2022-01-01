@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% block head %}
+    {% include './layouts/head.html' %}
+{% endblock %}
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         {% block  topbar%}
@@ -20,7 +22,8 @@
             <!-- Control sidebar content goes here -->
         </aside>
     </div>
-
-
+    {% block scripts %}
+        {% include './layouts/scripts.html' %}
+    {% endblock %}
 </body>
 </html>

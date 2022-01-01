@@ -20,3 +20,8 @@ def login():
 @view.route('/users')
 def users():
     return render_template('users.html')
+
+
+@view.route('/barang')
+def barang():
+    return render_template('barang.html')
