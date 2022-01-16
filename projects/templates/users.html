@@ -35,7 +35,7 @@
                       <th>Rendering engine</th>
                       <th>Browser</th>
                       <th>Platform(s)</th>
-                      <th>Engine version</th>
+                       <th>Engine version</th>
                       <th>CSS grade</th>
                     </tr>
                     </thead>
@@ -466,5 +466,22 @@
             </div>
     </div>
 </section>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 {% endblock %}

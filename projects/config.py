@@ -7,7 +7,7 @@ class Config(object):
     CSRF_ENABLED = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = os.environ.get(
-        "mysql://root@localhost/flexicash") or "mysql://root@localhost/flexicash"
+        "postgresql://postgres:Openthed00r@localhost:5432/flexicash")
     TWITTER_OAUTH_CLIENT_KEY = os.environ.get("TWITTER_OAUTH_CLIENT_KEY")
     TWITTER_OAUTH_CLIENT_SECRET = os.environ.get("TWITTER_OAUTH_CLIENT_SECRET")
     SESSION_COOKIE_SECURE = True
